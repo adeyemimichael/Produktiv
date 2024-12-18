@@ -1,3 +1,4 @@
+"use client"
 import acmeLogo from "@/assets/logo-acme.png"
 import quatumLogo from "@/assets/logo-quantum.png"
 import echoLogo from "@/assets/logo-echo.png"
@@ -5,39 +6,80 @@ import celestialLogo from "@/assets/logo-celestial.png"
 import Purselogo from "@/assets/logo-pulse.png";
 import apexLogo from "@/assets/logo-apex.png"
 import Image from "next/image";
+import {motion }from "framer-motion"
 export const LogoTicker = () => {
   return (
     <div className="py-8 bg-white md:py-12">
 <div className="container">
   <div className="flex  overflow-hidden mask-image-[linear-gradient(to_right,transparent,black,transparent)]  ">
-<div className=" flex gap-14 flex-none ">
+<motion.div className=" flex gap-14 flex-none pr-14  "
+animate={
+  {
+    translateX:"-50%"
+  }
+}
 
-  <Image 
-  src={acmeLogo}
+transition={
+  {
+    duration:10,
+    repeat:Infinity,
+    ease:"linear",
+    repeatType:"loop"
+  }
+}>
+
+  <motion.img 
+  src={acmeLogo.src}
    alt="acmelogos" 
    className="logo-ticker-image"/>
-  <Image
-   src={quatumLogo} 
+  <motion.img
+   src={quatumLogo.src} 
    alt="quatumlogos" 
    className="logo-ticker-image" />
-  <Image 
-  src={echoLogo} 
+  <motion.img 
+  src={echoLogo.src} 
   alt="echologos" 
   className="logo-ticker-image" />
-  <Image
-   src={celestialLogo} 
+  <motion.img
+   src={celestialLogo.src} 
    alt="celestiallogos" 
    className="logo-ticker-image" />
-  <Image 
-  src={Purselogo} 
+  <motion.img 
+  src={Purselogo.src} 
   alt="purselogos" 
   className="logo-ticker-image" />
-  <Image 
-  src={apexLogo}
+  <motion.img 
+  src={apexLogo.src}
+   alt="apexlogos" 
+   className="logo-ticker-image" />
+{/* second set of logo for animation# */}
+
+<motion.img 
+  src={acmeLogo.src}
+   alt="acmelogos" 
+   className="logo-ticker-image"/>
+  <motion.img
+   src={quatumLogo.src} 
+   alt="quatumlogos" 
+   className="logo-ticker-image" />
+  <motion.img 
+  src={echoLogo.src} 
+  alt="echologos" 
+  className="logo-ticker-image" />
+  <motion.img
+   src={celestialLogo.src} 
+   alt="celestiallogos" 
+   className="logo-ticker-image" />
+  <motion.img 
+  src={Purselogo.src} 
+  alt="purselogos" 
+  className="logo-ticker-image" />
+  <motion.img 
+  src={apexLogo.src}
    alt="apexlogos" 
    className="logo-ticker-image" />
 
-</div>
+</motion.div>
 </div>
 </div>
 

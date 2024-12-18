@@ -1,7 +1,9 @@
+'use client'
 import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png"
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg"
+import {motion} from 'framer-motion'
 export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">

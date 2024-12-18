@@ -1,7 +1,9 @@
+"use client"
 import { h1, li, section } from "framer-motion/client";
 import CheckIcon from "@/assets/check.svg"
 import { twMerge } from 'tailwind-merge';
-  
+import {easeInOut, motion}   from "framer-motion";
+import { useScroll } from "framer-motion";
 const pricingTiers = [
   {
     title: "Free",
@@ -79,12 +81,26 @@ export const Pricing = () => {
      <h3 className={twMerge("text-lg font-bold text--tighter leading-none", inverse === true && "text-white/60 ")}> {title}</h3>
       {popular === true && (
            <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20 ">
-     <span className="bg-rainbow rounded-sm text-transparent bg-clip-text font-medium">Popular</span></div>
+     <motion.span 
+     animate={
+      {
+        backgroundPositionX: "-100%",
+
+      }
+     }
+     transition={{
+      duration:1,
+      repeat:Infinity,
+      ease:"linear",
+      repeatType:"loop"
+
+     }}
+     className="bg-rainbow rounded-sm text-transparent bg-clip-text font-medium [background-size:200%]">Popular</motion.span></div>
       ) }
      </div>
      <div className="flex items-baseline gap-1  mt-[30px] ">
       <span className={twMerge("text-4xl  tracking-tight font-bold text-black ", inverse === true && "text-white")}>${monthlyPrice}</span>
-      <span className=" font-bold tracking-tighter text-black/50 ">/Month</span>
+      <span className={twMerge(" font-bold tracking-tighter text-black/50 ", inverse === true && "text-white")}>/Month</span>
      
      </div>
     
