@@ -3,7 +3,7 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png"
 import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg"
-import {motion} from 'framer-motion'
+import Link from "next/link";
 export const Header = () => {
   return (
     <header className="sticky top-0 backdrop-blur-sm z-20">
@@ -31,7 +31,7 @@ export const Header = () => {
      <a href="#">Customers</a>
      <a href="#">Updates</a>
      <a href="#">Help</a>
-     <button className="bg-black text-white font-medium  px-4 py-2 align-items justify-center rounded-lg tracking-tight">Get it for free</button>
+     <Link href="/register"><button className="bg-black text-white font-medium  px-4 py-2 align-items justify-center rounded-lg tracking-tight hover:bg-black/20 hover:text-black ">Get it for free</button></Link>
      </nav>
      </div>
   </div>

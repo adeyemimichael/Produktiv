@@ -149,7 +149,7 @@ export const Testimonials = () => {
  className="hidden md:block " duration={19}/>
     <TestimonialsColumn
  testimonials={thirdColumn}  
- className="hidden lg:block " duration={20}/> 
+ className="hidden lg:block " duration={24}/> 
      </div>
       </div>
 
